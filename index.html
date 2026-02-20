@@ -351,6 +351,28 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		
+			<script type='text/javascript'>
+				function initEmbeddedMessaging() {
+					try {
+						embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+			
+						embeddedservice_bootstrap.init(
+							'00DgL00000Js1x3',
+							'Test_Github_Channel',
+							'https://orgfarm-b897d70e8a-dev-ed.develop.my.site.com/ESWTestGithubChannel1771603938223',
+							{
+								scrt2URL: 'https://orgfarm-b897d70e8a-dev-ed.develop.my.salesforce-scrt.com'
+							}
+						);
+					} catch (err) {
+						console.error('Error loading Embedded Messaging: ', err);
+					}
+				};
+			</script>
+			<script type='text/javascript' src='https://orgfarm-b897d70e8a-dev-ed.develop.my.site.com/ESWTestGithubChannel1771603938223/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
 
 	</body>
+
 </html>
